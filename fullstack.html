@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Understanding full stack development – explore the layers of modern web applications with an interactive client→server→database simulation.">
+    <title>What is Full Stack Development? – Pratik Panta</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pratik&nbsp;Panta</a>
+            <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fullstack.html">Full&nbsp;Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="mb-3">What is Full Stack Development?</h1>
+            <p class="lead">Full stack development covers the entire journey from the user interface through the server logic to the database.  This page explains the layers and includes a hands‑on simulation.</p>
+            <p>Student: <strong>Pratik Panta</strong> | ID: <strong>BI95SW</strong></p>
+            <p>Tutor: <strong>Sandeep Bashyal</strong> | Module: <strong>CET138</strong> | Assessment: <strong>Web Fundamentals Portfolio</strong></p>
+        </div>
+    </header>
+    <main id="main-content" class="container my-5">
+        <!-- Explanation Section -->
+        <div class="content-section">
+            <h2>Definition &amp; Layers</h2>
+            <p>
+                Full stack development covers everything from the user interface your visitors see to the server logic that processes requests and the database that stores information.  A full stack developer is comfortable working across the <strong>front‑end (client‑side)</strong> and <strong>back‑end (server‑side)</strong> layers of a web application.  The typical stack comprises several layers:
+            </p>
+            <ul>
+                <li><strong>Frontend:</strong> The visible part of the application built with technologies like HTML, CSS and JavaScript.  It handles layout, styling and user interactions.</li>
+                <li><strong>Backend:</strong> The server logic that processes requests, applies business rules and communicates with databases and external services.</li>
+                <li><strong>Database:</strong> Persistent storage that retains information beyond the life of a request.  Common choices include relational systems like PostgreSQL and NoSQL stores like MongoDB.</li>
+                <li><strong>DevOps/Hosting:</strong> The deployment and monitoring layer that ensures the application runs reliably in production with tools such as containers, CI/CD pipelines and cloud services.</li>
+            </ul>
+        </div>
+        <!-- Demo Section -->
+        <div class="content-section">
+            <h2>Working Example: Client → Server → Database Simulation</h2>
+            <p>
+                This simulation illustrates the flow of data through a full stack.  You can enter a
+                message and select a type, then submit it.  The “client” sends your
+                input to the “server” for validation.  If the message passes validation
+                (not empty, at least 3 characters and containing no &lt; or &gt;), it is saved in a
+                simulated database.  Each step is logged below and stored records are shown in a table.
+            </p>
+            <form id="fs-form" class="row g-3 mb-3" aria-describedby="fs-desc">
+                <div class="col-md-6">
+                    <label for="fs-message" class="form-label">Message</label>
+                    <input type="text" class="form-control" id="fs-message" placeholder="Enter a message" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="fs-type" class="form-label">Message Type</label>
+                    <select id="fs-type" class="form-select">
+                        <option value="Info">Info</option>
+                        <option value="Warning">Warning</option>
+                        <option value="Error">Error</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-grid">
+                    <label class="visually-hidden" for="fs-submit">Submit</label>
+                    <button type="submit" id="fs-submit" class="btn btn-accent mt-4">Submit</button>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="h5">Event Log</h3>
+                    <ul id="fs-log" class="fs-log" aria-label="Process log"></ul>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h5">Stored Records</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-custom">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Message</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="fs-table-body"></tbody>
+                        </table>
+                    </div>
+                    <button id="fs-clear" class="btn btn-secondary btn-sm mt-2">Clear Database</button>
+                </div>
+            </div>
+        </div>
+        <!-- How It Works -->
+        <div class="content-section">
+            <h2>How It Works</h2>
+            <p>
+                The simulation uses JavaScript to mimic the way data travels in a real
+                full stack application.  When you submit the form, an event
+                handler collects the message and type on the client side and
+                appends a log entry.  The input is then “validated” on the server –
+                the script checks that the message isn’t empty, is at least
+                three characters long and doesn’t contain forbidden characters.
+                If validation passes, a new record object is created with a unique
+                identifier and timestamp and added to an in‑memory array.  Finally,
+                the stored records are rendered into an HTML table and a log entry
+                indicates that the database has been updated.
+            </p>
+        </div>
+        <!-- Key Takeaways -->
+        <div class="content-section">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>The full stack encompasses the frontend, backend, database and deployment/DevOps layers.</li>
+                <li>Data flows from the client to the server for validation before being persisted.</li>
+                <li>Input validation is essential to enforce business rules and security.</li>
+                <li>The simulation demonstrates how client‑side JavaScript can model server interactions.</li>
+            </ul>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Pratik Panta | Student ID: BI95SW | Tutor: Sandeep Bashyal</p>
+        <p class="small">Web Fundamentals Portfolio</p>
+    </footer>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Shared JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- Demo JS -->
+    <script src="assets/js/demos.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { window.demos.fullStackDemo(); });</script>
+</body>
+</html>

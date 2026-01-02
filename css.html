@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore CSS concepts and experiment with themes, layouts and animations on Pratik Panta's portfolio.">
+    <title>CSS Styling &amp; Layout – Pratik Panta</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pratik&nbsp;Panta</a>
+            <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fullstack.html">Full&nbsp;Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="mb-3">CSS: Styling &amp; Layout</h1>
+            <p class="lead">Cascading Style Sheets (CSS) describe how elements should be rendered on screen, in print or in other media.  CSS controls the visual presentation and layout of web pages.</p>
+            <p>Student: <strong>Pratik Panta</strong> | ID: <strong>BI95SW</strong></p>
+            <p>Tutor: <strong>Sandeep Bashyal</strong> | Module: <strong>CET138</strong> | Assessment: <strong>Web Fundamentals Portfolio</strong></p>
+        </div>
+    </header>
+    <main id="main-content" class="container my-5">
+        <!-- Explanation -->
+        <div class="content-section">
+            <h2>What is CSS?</h2>
+            <p>
+                CSS is a stylesheet language used to describe how HTML elements are presented.  It allows you to control colours, fonts, spacing and layout independently of the document structure.  By separating content from appearance, CSS makes your pages more maintainable and responsive.  Modern CSS includes powerful features like custom properties (variables), flexbox, grid and media queries.
+            </p>
+        </div>
+        <!-- Demo Section -->
+        <div class="content-section">
+            <h2>Working Example: Theme &amp; Layout Toggle &amp; Animation</h2>
+            <p>
+                Use the buttons below to experiment with different styling options.  You can switch between light and dark themes, change the layout of the cards from a CSS Grid to a Flexbox layout, and enable or disable a simple bounce animation.  Note how the colours and spacing come from CSS variables defined in the stylesheet.
+            </p>
+            <div class="mb-3">
+                <button id="theme-toggle" class="btn btn-accent me-2">Switch to Dark Theme</button>
+                <button id="layout-toggle" class="btn btn-accent me-2">Switch to Flex Layout</button>
+                <button id="animation-toggle" class="btn btn-accent">Enable Animation</button>
+            </div>
+            <div id="layout-demo">
+                <div class="layout-item">Card A</div>
+                <div class="layout-item">Card B</div>
+                <div class="layout-item">Card C</div>
+            </div>
+            <div class="mt-4">
+                <h3 class="h5">Box Model Demonstration</h3>
+                <div class="p-3" style="background-color: var(--secondary-bg); border: 3px solid var(--accent-color); margin: 1rem;">
+                    <div style="background-color: var(--primary-bg); padding: 1rem; border: 2px dashed var(--warning-color);">
+                        <p class="mb-0">This nested box illustrates how margin, border and padding interact in the CSS box model.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h3 class="h5">Specificity Demonstration</h3>
+                <p id="specificity-demo" class="text-primary">This text should appear in orange because an ID selector overrides a class selector.</p>
+            </div>
+        </div>
+        <!-- How It Works -->
+        <div class="content-section">
+            <h2>How It Works</h2>
+            <p>
+                The theme toggle changes the <code>data-theme</code> attribute on the
+                <code>&lt;html&gt;</code> element.  CSS variables (custom properties) are
+                defined for colours and shadows in the <code>:root</code> selector and
+                overridden under <code>[data-theme="dark"]</code>.  When the attribute is
+                toggled the entire palette updates.  The layout toggle switches
+                between CSS Grid and Flexbox by changing the container’s
+                <code>display</code> property and related flex settings.  The animation
+                toggle adds or removes a class that applies a keyframe
+                animation called <code>bounce</code> to each card.  The box model demo
+                uses nested elements with margin, border and padding to visualise
+                how space is calculated.  The line about specificity is styled by
+                two selectors: a class in Bootstrap and an ID in our custom CSS – the ID wins because it is more specific.
+            </p>
+            <p>
+                A media query in the stylesheet adjusts padding and layout on
+                screens narrower than 768 pixels.  Try resizing the browser to
+                observe how the spacing changes responsively.
+            </p>
+        </div>
+        <!-- Key Takeaways -->
+        <div class="content-section">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>CSS separates presentation from structure and uses selectors to target elements.</li>
+                <li>Custom properties (variables) make colour and spacing easy to manage.</li>
+                <li>Flexbox and Grid provide powerful tools for responsive layouts.</li>
+                <li>Specificity and the cascade determine which styles apply when selectors conflict.</li>
+                <li>Media queries adapt your design to different screen sizes.</li>
+            </ul>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Pratik Panta | Student ID: BI95SW | Tutor: Sandeep Bashyal</p>
+        <p class="small">Web Fundamentals Portfolio</p>
+    </footer>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Shared JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- Demo JS -->
+    <script src="assets/js/demos.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { window.demos.cssDemo(); });</script>
+    <!-- Custom inline style to override specificity demo -->
+    <style>
+    /* Specificity demonstration: ID selector overrides class */
+    #specificity-demo {
+        color: var(--warning-color) !important;
+    }
+    </style>
+</body>
+</html>

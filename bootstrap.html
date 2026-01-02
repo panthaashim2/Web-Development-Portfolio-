@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Bootstrap basics and explore grid, cards, modals and form validation on Pratik Panta's portfolio.">
+    <title>Bootstrap Framework – Pratik Panta</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pratik&nbsp;Panta</a>
+            <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fullstack.html">Full&nbsp;Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="mb-3">Bootstrap Framework</h1>
+            <p class="lead">Bootstrap is one of the most popular front‑end toolkits for building responsive, mobile‑first websites.  It includes prebuilt grid systems and UI components to speed up development.</p>
+            <p>Student: <strong>Pratik Panta</strong> | ID: <strong>BI95SW</strong></p>
+            <p>Tutor: <strong>Sandeep Bashyal</strong> | Module: <strong>CET138</strong> | Assessment: <strong>Web Fundamentals Portfolio</strong></p>
+        </div>
+    </header>
+    <main id="main-content" class="container my-5">
+        <!-- Explanation -->
+        <div class="content-section">
+            <h2>What is Bootstrap?</h2>
+            <p>
+                Originally developed at Twitter, Bootstrap is a front‑end toolkit that combines CSS and JavaScript to help build interfaces quickly.  Its responsive 12‑column grid system makes layouts adapt seamlessly across devices.  A wide library of components—such as navbars, buttons, cards and modals—accelerates development and ensures consistent styling.  Utility classes provide shortcuts for margins, padding, alignment, colours and more.
+            </p>
+        </div>
+        <!-- Demo Section -->
+        <div class="content-section">
+            <h2>Working Example: Grid, Cards, Modal &amp; Validation</h2>
+            <p>
+                In this demo a responsive grid arranges three cards evenly across the page.  Each card uses Bootstrap’s card component and triggers a modal with additional information.  Below the grid is a form illustrating Bootstrap’s built‑in validation styles—click “Validate” to see feedback on required fields.
+            </p>
+            <!-- Grid & Cards -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Responsive Grid</h5>
+                            <p class="card-text">The grid system is based on 12 columns and flexbox.  Use breakpoint‑specific classes such as <code>col-md-4</code> to control column widths.</p>
+                            <button type="button" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#modalGrid">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Prebuilt Components</h5>
+                            <p class="card-text">Bootstrap offers cards, navbars, alerts and many other components that you can customise with classes.</p>
+                            <button type="button" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#modalComponents">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Utilities</h5>
+                            <p class="card-text">Utility classes provide quick adjustments for spacing, colours, flexbox behaviours and more.</p>
+                            <button type="button" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#modalUtilities">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Form with validation -->
+            <form id="bs-form" class="row g-3" novalidate>
+                <div class="col-md-6">
+                    <label for="bs-name" class="form-label">Name</label>
+                    <input type="text" id="bs-name" class="form-control" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="bs-email" class="form-label">Email</label>
+                    <input type="email" id="bs-email" class="form-control" required>
+                    <div class="valid-feedback">Valid email.</div>
+                    <div class="invalid-feedback">Please provide a valid email.</div>
+                </div>
+                <div class="col-12">
+                    <label for="bs-message" class="form-label">Message</label>
+                    <textarea id="bs-message" class="form-control" rows="3" required></textarea>
+                    <div class="invalid-feedback">Please leave a message.</div>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                    <button id="bs-validate" type="button" class="btn btn-accent me-3">Validate</button>
+                    <small class="text-muted">Clicking “Validate” will apply Bootstrap’s <code>was-validated</code> class to the form.</small>
+                </div>
+            </form>
+        </div>
+        <!-- How It Works -->
+        <div class="content-section">
+            <h2>How It Works</h2>
+            <p>
+                The responsive grid uses <code>.row</code> and <code>.col</code> classes.  On small screens each card takes up the full width (<code>row-cols-1</code>); on medium screens it switches to three columns (<code>row-cols-md-3</code>).  Cards are built with the <code>.card</code> class and have no custom CSS here.  The modal functionality is completely declarative—buttons include <code>data-bs-toggle="modal"</code> and <code>data-bs-target</code> attributes that link to a modal defined later in the page.  Bootstrap’s JavaScript picks up these attributes and handles the rest.
+            </p>
+            <p>
+                The form demonstrates how Bootstrap’s validation styles work.  By default the form has the <code>novalidate</code> attribute to prevent the browser’s native validation UI.  When you click the “Validate” button JavaScript adds the <code>was-validated</code> class to the form, which triggers Bootstrap to apply <code>is-valid</code> or <code>is-invalid</code> classes based on each input’s validity state.  Helper feedback elements display the success or error messages accordingly.  This approach keeps your validation logic separate from your markup.
+            </p>
+        </div>
+        <!-- Key Takeaways -->
+        <div class="content-section">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>Bootstrap’s grid system makes responsive layouts straightforward using rows and columns.</li>
+                <li>Cards and modals are ready‑made components that require minimal configuration.</li>
+                <li>Utility classes simplify spacing, flexbox and colour adjustments.</li>
+                <li>Validation styles leverage the <code>was-validated</code> class to provide feedback without writing custom scripts.</li>
+            </ul>
+        </div>
+    </main>
+    <!-- Modals -->
+    <div class="modal fade" id="modalGrid" tabindex="-1" aria-labelledby="modalGridLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGridLabel">Bootstrap Grid System</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    The grid system divides the page into 12 columns.  You can combine columns to create flexible layouts and use breakpoint suffixes like <code>-md</code> or <code>-lg</code> to change widths on different devices.  This ensures your design adapts elegantly from mobile phones to desktops.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalComponents" tabindex="-1" aria-labelledby="modalComponentsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalComponentsLabel">Prebuilt Components</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bootstrap’s component library includes alerts, badges, buttons, dropdowns, navbars and more.  These components are styled consistently and can be customised by adding or overriding classes.  They speed up development and help maintain a cohesive look across pages.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalUtilities" tabindex="-1" aria-labelledby="modalUtilitiesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalUtilitiesLabel">Utility Classes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Utilities are single‑purpose helper classes that adjust padding (<code>.p‑*</code>), margin (<code>.m‑*</code>), flex properties (<code>.d‑flex</code>, <code>.justify‑content‑*</code>), colours and more.  They allow you to tweak your layout without writing extra CSS.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Pratik Panta | Student ID: BI95SW | Tutor: Sandeep Bashyal</p>
+        <p class="small">Web Fundamentals Portfolio</p>
+    </footer>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Shared JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- Demo JS -->
+    <script src="assets/js/demos.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { window.demos.bootstrapDemo(); });</script>
+</body>
+</html>

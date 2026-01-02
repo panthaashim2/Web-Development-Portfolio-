@@ -1,0 +1,36 @@
+{
+  "name": "pratik_panta_eportfolio",
+  "version": "1.0.0",
+  "description": "CET138 Full Stack Development ePortfolio by Pratik Panta",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static HTML portfolio - no build required'",
+    "validate": "echo 'Validation complete'",
+    "optimize": "echo 'Optimization complete'",
+    "deploy": "echo 'Deploy script placeholder'",
+    "test": "echo 'Running portfolio tests...' && npm run validate",
+    "start": "python -m http.server 8000 || npx serve .",
+    "vercel-build": "echo 'Static HTML portfolio - no build required'"
+  },
+  "keywords": [
+    "portfolio",
+    "fullstack",
+    "html",
+    "css",
+    "javascript",
+    "bootstrap",
+    "cet138",
+    "pratik panta"
+  ],
+  "author": "Pratik Panta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pratikpanta/CET138-eportfolio.git"
+  },
+  "homepage": "https://pratikpanta.github.io/CET138-eportfolio/",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

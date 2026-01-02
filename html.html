@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML and explore a semantic, accessible form example on Pratik Panta's ePortfolio.">
+    <title>HTML Fundamentals – Pratik Panta</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pratik&nbsp;Panta</a>
+            <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fullstack.html">Full&nbsp;Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="mb-3">HTML: Structuring the Web</h1>
+            <p class="lead">HyperText Markup Language (HTML) defines the meaning and structure of web content.  It forms the foundation upon which styling (CSS) and behaviour (JavaScript) are added.</p>
+            <p>Student: <strong>Pratik Panta</strong> | ID: <strong>BI95SW</strong></p>
+            <p>Tutor: <strong>Sandeep Bashyal</strong> | Module: <strong>CET138</strong> | Assessment: <strong>Web Fundamentals Portfolio</strong></p>
+        </div>
+    </header>
+    <main id="main-content" class="container my-5">
+        <!-- Explanation -->
+        <div class="content-section">
+            <h2>What is HTML?</h2>
+            <p>
+                HTML is the most basic building block of the web.  It defines the
+                meaning and structure of documents using elements and tags.  Other
+                technologies are used to describe a page’s appearance (CSS) or
+                behaviour (JavaScript), but HTML gives semantic meaning to text,
+                images and media so they can be interpreted by browsers and
+                assistive technologies.
+            </p>
+            <p>
+                Semantic markup improves accessibility and SEO.  Headings
+                (<code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>) establish document structure; lists
+                (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>) group related items; links
+                (<code>&lt;a&gt;</code>) connect pages; and forms collect user input.
+                Proper use of these elements helps both humans and machines
+                understand your content.
+            </p>
+        </div>
+        <!-- Demo Section -->
+        <div class="content-section">
+            <h2>Working Example: Semantic HTML &amp; Accessible Form</h2>
+            <p>
+                The snippet below demonstrates a semantic page layout.  It uses
+                an <code>&lt;article&gt;</code> to wrap the main content, <code>&lt;section&gt;</code>
+                elements for logical groupings, an <code>&lt;aside&gt;</code> for
+                complementary information, and a <code>&lt;figure&gt;</code> with
+                <code>&lt;figcaption&gt;</code> for images.  The accompanying form uses
+                explicit labels, appropriate input types and the <code>required</code>
+                attribute to ensure accessibility.
+            </p>
+            <!-- Semantic Layout Demo -->
+            <article class="mb-4 p-3 border rounded" style="background-color: var(--primary-bg)">
+                <header>
+                    <h3>The Importance of Semantic HTML</h3>
+                    <p>Using semantic elements conveys the meaning of your content.</p>
+                </header>
+                <section>
+                    <p>This is a section within the article.  It contains the main paragraph of the article and uses a <code>&lt;section&gt;</code> tag to delineate thematic grouping.</p>
+                </section>
+                <aside class="mt-3 p-2" style="background-color: var(--secondary-bg); border-left: 4px solid var(--accent-color)">
+                    <p><strong>Did you know?</strong> HTML5 introduced many new semantic elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>.</p>
+                </aside>
+                <figure class="mt-3 text-center">
+                    <img src="https://via.placeholder.com/400x200" class="img-fluid" alt="Placeholder diagram of HTML semantics">
+                    <figcaption>A simple figure with a caption to describe the image content.</figcaption>
+                </figure>
+            </article>
+            <!-- Accessible Form Demo -->
+            <form class="row g-3" novalidate>
+                <div class="col-md-6">
+                    <label for="html-name" class="form-label">Your Name</label>
+                    <input type="text" id="html-name" name="name" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="html-email" class="form-label">Email Address</label>
+                    <input type="email" id="html-email" name="email" class="form-control" placeholder="you@example.com" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="html-topic" class="form-label">Topic</label>
+                    <select id="html-topic" name="topic" class="form-select" required>
+                        <option value="">Choose…</option>
+                        <option>Feedback</option>
+                        <option>Question</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check mt-4 pt-2">
+                        <input class="form-check-input" type="checkbox" id="html-agree" required>
+                        <label class="form-check-label" for="html-agree">I agree to the terms and conditions</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="html-message" class="form-label">Message</label>
+                    <textarea id="html-message" name="message" class="form-control" rows="4" required></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-accent">Submit</button>
+                </div>
+            </form>
+            <!-- Static preview of form fields -->
+            <div class="mt-4">
+                <h3 class="h5">Form Field Overview (Static)</h3>
+                <ul>
+                    <li><strong>Name:</strong> text input (required)</li>
+                    <li><strong>Email:</strong> email input with placeholder (required)</li>
+                    <li><strong>Topic:</strong> select menu with options (required)</li>
+                    <li><strong>Agreement:</strong> checkbox (must be checked)</li>
+                    <li><strong>Message:</strong> textarea for comments (required)</li>
+                </ul>
+            </div>
+            <!-- Table Example -->
+            <div class="mt-4">
+                <h3 class="h5">Table Example</h3>
+                <table class="table table-bordered table-custom">
+                    <caption>HTML Elements and Their Purpose</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Element</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">&lt;header&gt;</th>
+                            <td>Represents introductory content or a set of navigational links.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">&lt;nav&gt;</th>
+                            <td>Contains navigation links for the current document or section.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">&lt;main&gt;</th>
+                            <td>Denotes the main content unique to the document.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">&lt;footer&gt;</th>
+                            <td>Holds information about the author, copyright, contact info, etc.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Definition List Example -->
+            <div class="mt-4">
+                <h3 class="h5">Definition List</h3>
+                <dl>
+                    <dt>Element</dt>
+                    <dd>An individual component of a web page defined by HTML tags.</dd>
+                    <dt>Attribute</dt>
+                    <dd>A modifier on an element that provides additional information, such as <code>class</code> or <code>href</code>.</dd>
+                    <dt>Semantic</dt>
+                    <dd>Conveying meaning through markup that reflects the role or purpose of the content.</dd>
+                </dl>
+            </div>
+        </div>
+        <!-- How It Works -->
+        <div class="content-section">
+            <h2>How It Works</h2>
+            <p>
+                The semantic layout groups related content using elements that convey meaning.  Using
+                <code>&lt;article&gt;</code> signals that the block is a self‑contained composition;
+                <code>&lt;section&gt;</code> identifies thematic groupings; and <code>&lt;aside&gt;</code>
+                contains complementary information.  <code>&lt;figure&gt;</code> and
+                <code>&lt;figcaption&gt;</code> associate images with captions.  In the form,
+                each <code>&lt;label&gt;</code> uses the <code>for</code> attribute to link to its
+                corresponding control by ID, ensuring screen reader users know what each field is for.  The
+                <code>required</code> attribute tells the browser to enforce input before submission.
+            </p>
+        </div>
+        <!-- Key Takeaways -->
+        <div class="content-section">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li>HTML gives structure and meaning to web pages with semantic elements.</li>
+                <li>Use headings, sections and lists to organise content logically.</li>
+                <li>Accessible forms require labels tied to inputs and appropriate input types.</li>
+                <li>Tables and definition lists provide structured data and term definitions.</li>
+            </ul>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Pratik Panta | Student ID: BI95SW | Tutor: Sandeep Bashyal</p>
+        <p class="small">Web Fundamentals Portfolio</p>
+    </footer>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Shared JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
